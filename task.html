@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-9-24</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        a>pre{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="./1.png" target="_self">
+        1.To print -1 to -10 without using >= operator.
+        <pre>
+        var num = +prompt("Enter a number  ");
+        for (var i = -1; !(i <= num - 1); i--) {
+            console.log(i);
+        }
+        </pre>
+    </a><br><br>
+    <a href="./2.png" target="_self">2.To print sum of even digits in a number.
+        <pre>
+            var num = prompt("Enter a number : "), sum = 0;
+            for (var i = 0; i < num.length; i++) {
+                if (num[i] % 2 == 0)
+                    sum += +(num[i]);
+            }
+            console.log(sum);
+            //method-2
+            var num = prompt("Enter a number : "), sum = 0;
+            if (num > 0) {
+                while (num > 0) {
+                    var dig = Math.trunc(num % 10);
+                    if (dig % 2 == 0) {
+                        sum += dig;
+                }
+                num = Math.trunc(num / 10);
+            }
+            console.log("sum", sum);
+            }
+            else {
+            console.log("invalid num");
+            }
+        </pre>
+    </a><br><br>
+    <a href="./3.png" target="_self">3.To print the sum of digits in a number using while loop.
+        <pre>
+            var num = prompt("Enter a number : "), sum = 0;
+            var i = 0
+            while (i < num.length) {
+                sum += +(num[i]);
+                i++
+            }
+            console.log(sum);
+            console.log("=====METHOD-2=====");
+            var num = prompt("Enter a number : "), sum = 0;
+            if (num > 0) {
+                while (num > 0) {
+                    var dig = Math.trunc(num % 10);
+                    sum += dig;
+                    num = Math.trunc(num / 10);
+                }
+                console.log("sum", sum);
+            }
+            else {
+                console.log("invalid num");
+            }
+        </pre>
+    </a>
+</body>
+</html>
